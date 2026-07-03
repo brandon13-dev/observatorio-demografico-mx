@@ -16,7 +16,7 @@ public class Observacion {
     private Long id;
 
     @Column(nullable = false)
-    private String periodo;
+    private Integer periodo;
 
     @Column(nullable = false)
     private String valor;
@@ -31,7 +31,7 @@ public class Observacion {
 
     public Observacion() {}
 
-    public Observacion(Long id, Municipio municipio, Indicador indicador, String periodo, String valor) {
+    public Observacion(Long id, Municipio municipio, Indicador indicador, Integer periodo, String valor) {
         this.id = id;
         this.municipio = municipio;
         this.indicador = indicador;
@@ -48,8 +48,8 @@ public class Observacion {
     public Indicador getIndicador() { return indicador; }
     public void setIndicador(Indicador indicador) { this.indicador = indicador; }
 
-    public String getPeriodo() { return periodo; }
-    public void setPeriodo(String periodo) { this.periodo = periodo; }
+    public Integer getPeriodo() { return periodo; }
+    public void setPeriodo(Integer periodo) { this.periodo = periodo; }
 
     public String getValor() { return valor; }
     public void setValor(String valor) { this.valor = valor; }
